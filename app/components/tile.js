@@ -20,16 +20,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#82E3B2',
     flexDirection: 'column'
   },
+	textContainer: {
+		justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: '#FFFFFF'
+	},
   titleContainer: {
-    flex: 1,
+    flex: 5,
     backgroundColor: '#58D093',
     alignSelf: 'stretch',
     padding: 6
   },
 	buttonContainer: {
+		flex: 1,
     backgroundColor: '#58D093',
-    alignSelf: 'flex-end',
-    padding: 10
+    alignSelf: 'stretch',
+    padding: 5
   },
 	event: {
 		color: '#fff',
@@ -45,7 +52,7 @@ const styles = StyleSheet.create({
 		color: '#fff',
 		fontSize: 20,
 		fontWeight: 'bold',
-		lineHeight: 26
+		textAlign: 'center'
 	},
   image: {
     flex: 3
@@ -70,25 +77,35 @@ class Tile extends Component {
       <View style={styles.container}>
         <Image style={styles.image}
           source={{uri: this.props.image}} />
-        <View style={styles.titleContainer}>
-          <Text style={styles.eventTitle}>
-            {this.props.eventTitle}
-          </Text>
-          <Text style={styles.eventSubTitle}>
-            {this.props.eventSubTitle}
-          </Text>
-        </View>
-				<View style={styles.buttonContainer}>
-					<TouchableNativeFeedback
-						onPress={() => {
-							Actions.details({data:"Custom data", title:'Custom title' });
-						}}>
-						<View style={styles.buttonContainer}>
-							<Text style={styles.button}>
-								+
-							</Text>
-						</View>
-          </TouchableNativeFeedback>
+				<View  style={styles.textContainer}>
+					<View style={styles.titleContainer}>
+						<Text style={styles.eventTitle}>
+							{this.props.eventTitle}
+						</Text>
+						<Text style={styles.eventSubTitle}>
+							{this.props.eventSubTitle}
+						</Text>
+					</View>
+					<View style={styles.buttonContainer}>
+						<TouchableNativeFeedback
+							background={TouchableNativeFeedback.Ripple('#fafafa', true)}
+							onPress={() => {
+								Actions.details(
+									{
+										eventTitle: this.props.eventTitle,
+										eventSubTitle: this.props.eventSubTitle,
+										image: this.props.image
+									}
+								);
+							}}
+							>
+							<View>
+								<Text style={styles.button}>
+									+
+								</Text>
+							</View>
+						</TouchableNativeFeedback>
+					</View>
 				</View>
       </View>
     );
