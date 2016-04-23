@@ -28,7 +28,7 @@ class MainView extends Component {
     });
     this.state = {
       companies: ds.cloneWithRows(this.generateData())
-    }
+    };
   }
 
   generateData() {
