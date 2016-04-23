@@ -21,13 +21,14 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
   },
 	textContainer: {
+    flex: 2,
 		justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#FFFFFF'
 	},
   titleContainer: {
-    flex: 5,
+    flex: 6,
     backgroundColor: '#58D093',
     alignSelf: 'stretch',
     padding: 6
