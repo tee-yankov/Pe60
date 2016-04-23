@@ -9,6 +9,7 @@ import {
 import Splash from './components/splash';
 import Login from './components/login';
 import Events from './components/events';
+import EventDetails from './components/eventDetails';
 
 class Pe60 extends Component {
   render() {
@@ -18,6 +19,7 @@ class Pe60 extends Component {
           <Scene key="splash" component={Splash} initial={true} title="VolunteerMe" />
           <Scene key="login" component={Login} title="Login" />
           <Scene key="events" component={Events} title="Events" />
+					<Scene key="details" component={EventDetails} title="EventDetails" />
         </Scene>
       </Router>
     );

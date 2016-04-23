@@ -49,7 +49,7 @@ class Events extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <NavBar />
+        <NavBar backButton={false} />
         <ListView
           contentContainerStyle={styles.container}
           renderRow={this.renderTiles}

@@ -4,8 +4,11 @@ import React, {
   Image,
   Text,
   StyleSheet,
-  Dimensions
+  Dimensions,
+	TouchableNativeFeedback
 } from 'react-native';
+
+import { Actions } from 'react-native-router-flux';
 
 const { width } = Dimensions.get('window');
 
@@ -20,9 +23,35 @@ const styles = StyleSheet.create({
   titleContainer: {
     flex: 1,
     backgroundColor: '#58D093',
+<<<<<<< Updated upstream
     alignSelf: 'stretch',
     padding: 6
+=======
+    alignSelf: 'flex-end',
+    padding: 10
   },
+	buttonContainer: {
+    backgroundColor: '#58D093',
+    alignSelf: 'flex-end',
+    padding: 10
+>>>>>>> Stashed changes
+  },
+	event: {
+		color: '#fff',
+		fontSize: 18,
+		fontWeight: 'bold'
+	},
+	company: {
+		color: '#fff',
+		fontSize: 16
+	},
+
+	button: {
+		color: '#fff',
+		fontSize: 20,
+		fontWeight: 'bold',
+		lineHeight: 26
+	},
   image: {
     flex: 3
   },
@@ -37,6 +66,10 @@ const styles = StyleSheet.create({
 });
 
 class Tile extends Component {
+	seeEventInfo = (e) => {
+		console.log(e);
+	};
+
   render() {
     return (
       <View style={styles.container}>
@@ -50,6 +83,18 @@ class Tile extends Component {
             {this.props.eventSubTitle}
           </Text>
         </View>
+				<View style={styles.buttonContainer}>
+					<TouchableNativeFeedback
+						onPress={() => {
+							Actions.details({data:"Custom data", title:'Custom title' });
+						}}>
+						<View style={styles.buttonContainer}>
+							<Text style={styles.button}>
+								+
+							</Text>
+						</View>
+          </TouchableNativeFeedback>
+				</View>
       </View>
     );
   }
