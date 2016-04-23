@@ -2,29 +2,46 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  Image
+  Image,
+  View
 } from 'react-native';
 
 const styles = StyleSheet.create({
+  container: {
+    flexWrap: 'nowrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
   mainText: {
     fontSize: 64,
     fontFamily: 'lobster',
     color: '#FFFFFF'
   },
   theV: {
-    width: 64,
-    height: 64
+    width: 67,
+    height: 64,
+    transform: [
+      {
+        translateX: 8
+      },
+      {
+        translateY: -6
+      }
+    ]
   }
 });
 
 class Logo extends Component {
   render() {
     return (
-      <Text style={styles.mainText}>
+      <View style={styles.container}>
         <Image style={styles.theV}
           source={require('../images/theV.png')} />
-        olunteerMe
-      </Text>
+        <Text style={styles.mainText}>
+          olunteerMe
+        </Text>
+      </View>
     );
   }
 }
