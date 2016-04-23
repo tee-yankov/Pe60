@@ -23,18 +23,13 @@ const styles = StyleSheet.create({
   titleContainer: {
     flex: 1,
     backgroundColor: '#58D093',
-<<<<<<< Updated upstream
     alignSelf: 'stretch',
     padding: 6
-=======
-    alignSelf: 'flex-end',
-    padding: 10
   },
 	buttonContainer: {
     backgroundColor: '#58D093',
     alignSelf: 'flex-end',
     padding: 10
->>>>>>> Stashed changes
   },
 	event: {
 		color: '#fff',
