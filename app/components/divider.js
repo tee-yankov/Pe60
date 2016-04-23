@@ -8,6 +8,7 @@ class Divider extends Component {
 	render() {
 		return (
 			<View>
+
 			</View>
 		);
 	}
