@@ -13,18 +13,26 @@ const styles = StyleSheet.create({
   container: {
     margin: 12,
     width: width / 2 - 24,
-    height: 156,
+    height: 200,
     backgroundColor: '#82E3B2',
-    flexDirection: 'row'
+    flexDirection: 'column'
   },
   titleContainer: {
     flex: 1,
     backgroundColor: '#58D093',
-    alignSelf: 'flex-end',
-    padding: 12
+    alignSelf: 'stretch',
+    padding: 6
   },
   image: {
-    flex: 2
+    flex: 3
+  },
+  eventTitle: {
+    fontWeight: 'bold',
+    color: '#FFFFFF'
+  },
+  eventSubTitle: {
+    fontSize: 12,
+    color: '#FFFFFF'
   }
 });
 
@@ -32,13 +40,14 @@ class Tile extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.image} />
+        <Image style={styles.image}
+          source={{uri: this.props.image}} />
         <View style={styles.titleContainer}>
-          <Text>
-            Some event
+          <Text style={styles.eventTitle}>
+            {this.props.eventTitle}
           </Text>
-          <Text>
-            Company
+          <Text style={styles.eventSubTitle}>
+            {this.props.eventSubTitle}
           </Text>
         </View>
       </View>

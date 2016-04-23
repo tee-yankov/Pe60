@@ -5,6 +5,8 @@ import React, {
   View
 } from 'react-native';
 
+import faker from 'faker';
+
 import Tile from './tile';
 import NavBar from './navbar';
 
@@ -23,14 +25,24 @@ class Events extends Component {
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
+    const events = [];
+    for (let i = 0; i < 69; i++) {
+      events.push({
+        eventTitle: faker.company.companyName(),
+        eventSubTitle: faker.company.catchPhrase(),
+        image: faker.image.image()
+      });
+    }
     this.state = {
-      tiles: ds.cloneWithRows([1,2,3,4,5,6,7,8,9,10])
+      tiles: ds.cloneWithRows(events)
     };
   }
 
-  renderTiles() {
+  renderTiles(rowData) {
     return (
-      <Tile />
+      <Tile eventTitle={rowData.eventTitle}
+        eventSubTitle={rowData.eventSubTitle}
+        image={rowData.image} />
     );
   }
 
