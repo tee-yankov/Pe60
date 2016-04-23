@@ -13,6 +13,7 @@
     "lodash": "^4.11.1",
     "react": "^0.14.8",
     "react-native": "^0.24.1",
+    "react-native-drawer": "^2.0.0",
     "react-native-router-flux": "^3.22.8",
     "react-native-spinkit": "0.0.10"
   }
