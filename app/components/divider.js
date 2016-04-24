@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		flexWrap: 'nowrap',
 		paddingLeft: 12,
-		paddingRight: 12
+		paddingRight: 12,
+		margin: 10
 	},
 	bar: {
 		flex: 1,

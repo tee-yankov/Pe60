@@ -54,7 +54,7 @@ class Events extends Component {
       <View style={{flex: 1}}>
         <NavBar
 					title={this.props.title}
-					goBack={() => {Actions.categories();}}
+					goBack={() => {Actions.pop();}}
 					backButton={true} />
         <ListView
           contentContainerStyle={styles.container}

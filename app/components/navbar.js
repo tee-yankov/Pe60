@@ -65,9 +65,7 @@ class NavBar extends Component {
       <View style={styles.container}>
 				<TouchableNativeFeedback
 					background={TouchableNativeFeedback.Ripple('#fafafa', true)}
-					onPress={() => {
-            Actions.pop();
-          }}>
+					onPress={this.props.goBack}>
 					<View>
 						{!this.props.backButton ?
 							<Image

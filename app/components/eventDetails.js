@@ -12,6 +12,9 @@ import React, {
 import NavBar from './navbar';
 import Divider from './divider';
 
+import Volunteers from './volunteers';
+import { Actions } from 'react-native-router-flux';
+
 const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
@@ -29,6 +32,9 @@ const styles = StyleSheet.create({
 		marginLeft: 20,
 		marginRight: 20
 	},
+	volunteersContainer: {
+		margin: 10
+	},
 	title: {
 		color: '#333',
 		fontFamily: 'lobster',
@@ -45,10 +51,15 @@ const styles = StyleSheet.create({
 		textAlign: 'right'
 	},
 	imageContainer: {
-		marginLeft: (width - (width / 2 - 24)) / 2,
-		margin: 20,
-    width: width / 2 - 24,
-    height: 200
+		flex: 1,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginTop: 20
+	},
+	imageWrapper: {
+		width: width / 2 - 24,
+		height: 200
 	},
 	image: {
     flex: 3
@@ -81,6 +92,7 @@ class EventDetails extends Component {
 			<View style={{flex: 1}}>
 				<NavBar
 					title={this.props.eventTitle}
+					goBack={() => {Actions.pop();}}
 					backButton={true} />
 				<ScrollView>
 					<View style={styles.container}>
@@ -91,8 +103,10 @@ class EventDetails extends Component {
 							{this.props.eventSubTitle}
 						</Text>
 						<View style={styles.imageContainer}>
-							<Image style={styles.image}
-								source={{uri: this.props.image}} />
+							<View style={styles.imageWrapper}>
+								<Image style={styles.image}
+									source={{uri: this.props.image}} />
+							</View>
 						</View>
 
 						<View style={styles.containerRow}>
@@ -129,6 +143,14 @@ class EventDetails extends Component {
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</Text>
 
+						<Divider />
+
+						<Text style={[styles.title, styles.margin]}>
+							Volunteers
+						</Text>
+
+						<Volunteers />
+
 						<TouchableNativeFeedback>
 							<View style={[styles.button, { backgroundColor: '#5A9EC6' }]}>
 								<Text style={styles.buttonText}>
@@ -137,8 +159,6 @@ class EventDetails extends Component {
 							</View>
 						</TouchableNativeFeedback>
 					</View>
-
-
 
 				</ScrollView>
 			</View>

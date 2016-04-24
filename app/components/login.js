@@ -1,6 +1,7 @@
 import React, {
   Component,
   View,
+	ScrollView,
   StyleSheet,
   TextInput,
   Text,
@@ -56,37 +57,39 @@ const styles = StyleSheet.create({
 class Login extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.logoView}>
-          <Logo />
-        </View>
-        <View style={styles.loginContainer}>
-          <TextInput
-            placeholder="Username"
-            style={styles.inputContainer} />
-          <TextInput
-            placeholder="Password"
-						password={true}
-            style={styles.inputContainer} />
-          <TouchableNativeFeedback
-            onPress={() => {
-              Actions.categories();
-            }}>
-            <View style={[styles.button, { backgroundColor: '#5A9EC6' }]}>
-              <Text style={styles.buttonText}>
-                Log In
-              </Text>
-            </View>
-          </TouchableNativeFeedback>
-          <TouchableNativeFeedback>
-            <View style={[styles.button, { backgroundColor: '#FFBD6C' }]}>
-              <Text style={styles.buttonText}>
-                Sign Up
-              </Text>
-            </View>
-          </TouchableNativeFeedback>
-        </View>
-      </View>
+			<ScrollView style={styles.container}>
+				<View >
+					<View style={styles.logoView}>
+						<Logo />
+					</View>
+					<View style={styles.loginContainer}>
+						<TextInput
+							placeholder="Username"
+							style={styles.inputContainer} />
+						<TextInput
+							placeholder="Password"
+							password={true}
+							style={styles.inputContainer} />
+						<TouchableNativeFeedback
+							onPress={() => {
+								Actions.categories();
+							}}>
+							<View style={[styles.button, { backgroundColor: '#5A9EC6' }]}>
+								<Text style={styles.buttonText}>
+									Log In
+								</Text>
+							</View>
+						</TouchableNativeFeedback>
+						<TouchableNativeFeedback>
+							<View style={[styles.button, { backgroundColor: '#FFBD6C' }]}>
+								<Text style={styles.buttonText}>
+									Sign Up
+								</Text>
+							</View>
+						</TouchableNativeFeedback>
+					</View>
+				</View>
+			</ScrollView>
     );
   }
 }

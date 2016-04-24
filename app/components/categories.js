@@ -42,7 +42,8 @@ class Categories extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <NavBar backButton={false} />
+        <NavBar
+					backButton={false} />
         <ScrollView
 					contentContainerStyle={styles.container}>
 					{this.renderCategories()}
