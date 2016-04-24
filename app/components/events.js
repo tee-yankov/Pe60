@@ -25,11 +25,12 @@ class Events extends Component {
   constructor(props) {
     super(props);
     const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 !== r2
+      rowHasChanged: (r1, r2) => r1.id !== r2.id
     });
     const events = [];
     for (let i = 0; i < 69; i++) {
       events.push({
+        id: faker.random.uuid,
         eventTitle: faker.company.companyName(),
         eventSubTitle: faker.company.catchPhrase(),
         image: faker.image.image()

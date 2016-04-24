@@ -10,7 +10,6 @@ import Splash from './components/splash';
 import Login from './components/login';
 import Events from './components/events';
 import EventDetails from './components/eventDetails';
-import Drawer from './components/drawer';
 import Categories from './components/categories';
 
 class Pe60 extends Component {
