@@ -78,7 +78,9 @@ class EventDetails extends Component {
 		console.log(this.props);
 		return (
 			<View style={{flex: 1}}>
-				<NavBar backButton={true} />
+				<NavBar
+					title={this.props.eventTitle}
+					backButton={true} />
 				<ScrollView>
 					<View style={styles.container}>
 						<Text style={[styles.title, styles.centerText]}>

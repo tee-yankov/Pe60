@@ -75,40 +75,53 @@ class Tile extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Image style={styles.image}
-          source={{uri: this.props.image}} />
-				<View  style={styles.textContainer}>
-					<View style={styles.titleContainer}>
-						<Text style={styles.eventTitle}>
-							{this.props.eventTitle}
-						</Text>
-						<Text style={styles.eventSubTitle}>
-							{this.props.eventSubTitle}
-						</Text>
-					</View>
-					<View style={styles.buttonContainer}>
-						<TouchableNativeFeedback
-							background={TouchableNativeFeedback.Ripple('#fafafa', true)}
-							onPress={() => {
-								Actions.details(
-									{
-										eventTitle: this.props.eventTitle,
-										eventSubTitle: this.props.eventSubTitle,
-										image: this.props.image
-									}
-								);
-							}}
-							>
-							<View>
-								<Text style={styles.button}>
-									+
-								</Text>
-							</View>
-						</TouchableNativeFeedback>
+			<TouchableNativeFeedback
+				background={TouchableNativeFeedback.Ripple('#fafafa', true)}
+				onPress={() => {
+					Actions.details(
+						{
+							eventTitle: this.props.eventTitle,
+							eventSubTitle: this.props.eventSubTitle,
+							image: this.props.image
+						}
+					);
+				}}
+			>
+				<View style={styles.container}>
+					<Image style={styles.image}
+						source={{uri: this.props.image}} />
+					<View  style={styles.textContainer}>
+						<View style={styles.titleContainer}>
+							<Text style={styles.eventTitle}>
+								{this.props.eventTitle}
+							</Text>
+							<Text style={styles.eventSubTitle}>
+								{this.props.eventSubTitle}
+							</Text>
+						</View>
+						<View style={styles.buttonContainer}>
+							<TouchableNativeFeedback
+								background={TouchableNativeFeedback.Ripple('#fafafa', true)}
+								onPress={() => {
+									Actions.details(
+										{
+											eventTitle: this.props.eventTitle,
+											eventSubTitle: this.props.eventSubTitle,
+											image: this.props.image
+										}
+									);
+								}}
+								>
+								<View>
+									<Text style={styles.button}>
+										+
+									</Text>
+								</View>
+							</TouchableNativeFeedback>
+						</View>
 					</View>
 				</View>
-      </View>
+			</TouchableNativeFeedback>
     );
   }
 }

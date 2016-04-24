@@ -102,6 +102,7 @@ class Splash extends Component {
         </Animated.View>
         <Animated.View style={{ opacity: this.state.viewOpacity, top: this.state.logoViewPosition }}>
           <TouchableHighlight
+						underlayColor="#58D093"
             onPress={ () => {
               Actions.login();
             } } >

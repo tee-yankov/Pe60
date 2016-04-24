@@ -19,10 +19,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#58D093',
   },
   controlText: {
-    color: 'black',
+    color: 'white',
+		fontSize: 20
   },
   button: {
     borderWidth: 1,

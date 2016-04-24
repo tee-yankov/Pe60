@@ -10,6 +10,8 @@ import faker from 'faker';
 import Tile from './tile';
 import NavBar from './navbar';
 
+import { Actions } from 'react-native-router-flux';
+
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
@@ -49,7 +51,10 @@ class Events extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <NavBar backButton={false} />
+        <NavBar
+					title={this.props.title}
+					goBack={() => {Actions.categories();}}
+					backButton={true} />
         <ListView
           contentContainerStyle={styles.container}
           renderRow={this.renderTiles}

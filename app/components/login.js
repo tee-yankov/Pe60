@@ -26,14 +26,20 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   inputContainer: {
-    margin: 24,
+    marginLeft: 34,
+		marginRight: 34,
+		marginTop: 10,
+		marginBottom: 10,
     backgroundColor: '#FFFFFF',
-    borderRadius: 24
+    borderRadius: 24,
+		padding: 5,
+		fontSize: 20,
+		color: '#666'
   },
   button: {
     flex: 1,
-    marginLeft: 24,
-    marginRight: 24,
+    marginLeft: 34,
+    marginRight: 34,
     marginTop: 12,
     marginBottom: 12,
     padding: 12,
@@ -60,10 +66,11 @@ class Login extends Component {
             style={styles.inputContainer} />
           <TextInput
             placeholder="Password"
+						password={true}
             style={styles.inputContainer} />
           <TouchableNativeFeedback
             onPress={() => {
-              Actions.events();
+              Actions.categories();
             }}>
             <View style={[styles.button, { backgroundColor: '#5A9EC6' }]}>
               <Text style={styles.buttonText}>

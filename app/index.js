@@ -11,19 +11,19 @@ import Login from './components/login';
 import Events from './components/events';
 import EventDetails from './components/eventDetails';
 import Drawer from './components/drawer';
+import Categories from './components/categories';
 
 class Pe60 extends Component {
   render() {
     return (
       <Router>
-        <Scene key="drawer" component={Drawer}>
           <Scene key="root" hideNavBar={true}>
             <Scene key="splash" component={Splash} initial={true} title="VolunteerMe" />
             <Scene key="login" component={Login} title="Login" />
             <Scene key="events" component={Events} title="Events" />
             <Scene key="details" component={EventDetails} title="EventDetails" />
+            <Scene key="categories" component={Categories} title="Categories" />
           </Scene>
-        </Scene>
       </Router>
     );
   }
