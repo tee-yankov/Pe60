@@ -17,11 +17,11 @@ class Pe60 extends Component {
     return (
       <Router>
           <Scene key="root" hideNavBar={true}>
-            <Scene key="splash" component={Splash} initial={true} title="VolunteerMe" />
-            <Scene key="login" component={Login} title="Login" />
-            <Scene key="events" component={Events} title="Events" />
-            <Scene key="details" component={EventDetails} title="EventDetails" />
-            <Scene key="categories" component={Categories} title="Categories" />
+            <Scene panHandlers={null} key="splash" component={Splash} initial={true} title="VolunteerMe" />
+            <Scene panHandlers={null} key="login" component={Login} title="Login" />
+            <Scene panHandlers={null} key="events" component={Events} title="Events" />
+            <Scene panHandlers={null} key="details" component={EventDetails} title="EventDetails" />
+            <Scene panHandlers={null} key="categories" component={Categories} title="Categories" />
           </Scene>
       </Router>
     );
