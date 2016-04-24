@@ -10,6 +10,7 @@ import React, {
 } from 'react-native';
 
 import NavBar from './navbar';
+import Divider from './divider';
 
 const { width } = Dimensions.get('window');
 
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
 	},
 	imageContainer: {
 		marginLeft: (width - (width / 2 - 24)) / 2,
-		marginTop: 20,
+		margin: 20,
     width: width / 2 - 24,
     height: 200
 	},
@@ -118,6 +119,8 @@ class EventDetails extends Component {
 								10 people
 							</Text>
 						</View>
+
+						<Divider />
 
 						<Text style={[styles.title, styles.margin]}>
 							Info
