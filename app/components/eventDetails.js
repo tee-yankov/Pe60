@@ -140,7 +140,7 @@ class EventDetails extends Component {
 				</ScrollView>
 			</View>
 		);
-	};
-};
+	}
+}
 
 export default EventDetails;

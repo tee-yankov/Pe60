@@ -65,7 +65,9 @@ class NavBar extends Component {
       <View style={styles.container}>
 				<TouchableNativeFeedback
 					background={TouchableNativeFeedback.Ripple('#fafafa', true)}
-					onPress={this.props.goBack}>
+					onPress={() => {
+            Actions.pop();
+          }}>
 					<View>
 						{!this.props.backButton ?
 							<Image
@@ -79,7 +81,7 @@ class NavBar extends Component {
 				</TouchableNativeFeedback>
 					{!this.props.backButton ?
 						<View style={styles.logoContainer}>
-          		<Logo />
+              <Logo />
 						</View> :
 						<View style={styles.titleContainer}>
 							<Text style={styles.title}>
