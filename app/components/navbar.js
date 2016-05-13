@@ -9,8 +9,6 @@ import {
 
 import Logo from './logo';
 
-import { Actions } from 'react-native-router-flux';
-
 const styles = StyleSheet.create({
   container: {
     height: 60,

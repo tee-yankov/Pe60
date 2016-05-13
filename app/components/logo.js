@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   mainText: {
-    fontSize: 64,
+    fontSize: 48,
     fontFamily: 'lobster',
     color: '#FFFFFF'
   },
   theV: {
-    width: 67,
-    height: 64,
+    width: 50,
+    height: 48,
     transform: [
       {
         translateX: 8
