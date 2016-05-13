@@ -1,6 +1,5 @@
-import React, {
-  Component,
-  ListView,
+import React, { Component } from 'react';
+import {
   StyleSheet,
 	ScrollView,
   View

@@ -1,5 +1,5 @@
-import React, {
-  Component,
+import React, { Component } from 'react';
+import {
   StyleSheet,
   Text,
   Image,
@@ -39,7 +39,7 @@ class Logo extends Component {
         <Image style={styles.theV}
           source={require('../images/theV.png')} />
         <Text style={styles.mainText}>
-          olunteerMe
+          olunteery
         </Text>
       </View>
     );

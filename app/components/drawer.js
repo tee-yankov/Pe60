@@ -1,6 +1,4 @@
-import React, {
-  Component
-} from 'react-native';
+import React, { Component } from 'react';
 import {
   DefaultRenderer
 } from 'react-native-router-flux';

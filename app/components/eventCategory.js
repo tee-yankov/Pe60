@@ -1,6 +1,5 @@
-import React, {
-  Component,
-  ListView,
+import React, { Component } from 'react';
+import {
   StyleSheet,
 	ScrollView,
 	Text,
@@ -11,7 +10,6 @@ import React, {
 import faker from 'faker';
 
 import Tile from './tile';
-import NavBar from './navbar';
 
 import { Actions } from 'react-native-router-flux';
 

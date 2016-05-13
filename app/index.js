@@ -1,5 +1,5 @@
-import React, {
-  Component,
+import React, { Component } from 'react';
+import {
   AppRegistry
 } from 'react-native';
 import {
@@ -17,7 +17,7 @@ class Pe60 extends Component {
     return (
       <Router>
         <Scene key="root" hideNavBar={true}>
-          <Scene panHandlers={null} key="splash" component={Splash} initial={true} title="VolunteerMe" />
+          <Scene panHandlers={null} key="splash" component={Splash} initial={true} title="Volunteery" />
           <Scene panHandlers={null} key="login" component={Login} title="Login" />
           <Scene panHandlers={null} key="events" component={Events} title="Events" />
           <Scene panHandlers={null} key="details" component={EventDetails} title="EventDetails" />

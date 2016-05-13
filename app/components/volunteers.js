@@ -1,7 +1,5 @@
-import React, {
-	Component,
-	Text,
-	View,
+import React, { Component } from 'react';
+import {
 	ScrollView
 } from 'react-native';
 
@@ -48,7 +46,7 @@ class Volunteers extends Component {
 
 	render() {
 		return (
-			 <ScrollView
+				<ScrollView
 					contentContainerStyle={styles.container}
 					horizontal={true}>
 					{this.renderTiles()}
