@@ -5,7 +5,6 @@ import {
   View
 } from 'react-native';
 
-import Tile from './tile';
 import NavBar from './navbar';
 import EventCategory from './eventCategory';
 

@@ -27,10 +27,11 @@ const styles = StyleSheet.create({
 		margin: 10
 	},
   logoContainer: {
+    flex: 1,
     height: 64,
     transform: [
       {
-        translateX: -20
+        translateY: 5
       },
       {
         scaleY: 0.6
